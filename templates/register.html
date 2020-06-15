@@ -1,0 +1,21 @@
+{% extends "baza.html" %}
+{% block content %}
+ <div class="starter-template">
+  <h1>Rejstracja</h1>
+  <form action= "{{ url_for('adduser') }}" method= "POST">
+        <div class="input-group mb-2 col-sm-6">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">Login</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name=login required>
+        </div>
+  <div class="input-group mb-2 col-sm-6">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">Password</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name=password required>
+  </div>
+        <p><input class="btn-primary" type=submit value=Login>
+    </form>
+ </div>
+ {% endblock %}

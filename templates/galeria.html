@@ -1,0 +1,17 @@
+{% extends "baza.html" %}
+{% block content %}
+<h1>Galeria</h1>
+<div class="container"><form action = "/uploader" method = "POST" 
+         enctype = "multipart/form-data">
+<input type="text" name="user" value="{{ current_user.name }}"readonly="readonly"/><br>
+         <input type = "file" name = "file" />
+         <input type = "submit"/>
+      </form>   </div>
+<div class="container">
+{% for tab in tab %}
+
+ <img class="rounded" src="/static/images/{{tab}}" alt="" style="max-width:300px;margin-bottom:2px;"/>
+
+ {% endfor%}
+ </div>
+ {% endblock %}

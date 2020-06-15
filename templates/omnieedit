@@ -1,0 +1,18 @@
+{% extends "baza.html" %}
+{% block content %}
+
+   login:{{current_user}}    
+<br>
+       
+       {% for rekord in rekordy %}
+
+            Imie:{{rekord["imie"]}}
+            <br>
+            Nazwisko:{{rekord["nazwisko"]}}
+            <br>
+            Adres:{{ rekord["adres"]}}
+            <br>
+            opis:{{ rekord["opis"]}}
+  
+        {% endfor%}  
+{% endblock %}

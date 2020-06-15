@@ -1,0 +1,22 @@
+{% extends "baza.html" %}
+{% block content %}
+ <div class="starter-template">
+  <h1>Dodaj studenta</h1>
+  <form action= "{{ url_for('addrec') }}" method= "POST">
+   Imię i nazwisko
+   <br>
+   <input type= "text" name= "imieinazwisko"/>
+   </br>
+   Nr pracownika
+   <br>
+   <input type= "text" name= "nrpracownika"/>
+   </br>
+   Adres
+   <br>
+   <textarea name= "adres"></textarea>
+   </br>
+   <input type= "submit" value= "Zapisz"/>
+   <br>
+  </form>
+ </div>
+ {% endblock %}

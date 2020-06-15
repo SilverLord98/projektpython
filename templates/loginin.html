@@ -1,0 +1,6 @@
+{% extends "baza.html" %}
+{% block content %}
+ {% if current_user.is_authenticated %}
+ Witaj {{ current_user.name }}
+ {% endif%}
+  {% endblock %}
